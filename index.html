@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Couleurs</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.2/chroma.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Générateur de Couleurs</h1>
+        <p class="subtitle">Créez des palettes de couleurs harmonieuses</p>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="color-count">Nombre de couleurs:</label>
+                <select id="color-count">
+                    <option value="3">3</option>
+                    <option value="5" selected>5</option>
+                    <option value="7">7</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="hue-range">Plage de teintes:</label>
+                <select id="hue-range">
+                    <option value="full">Complète (0-360°)</option>
+                    <option value="warm" selected>Chaudes (0-90°)</option>
+                    <option value="cool">Froides (180-270°)</option>
+                    <option value="pastel">Pastel (personnalisé)</option>
+                </select>
+            </div>
+            
+            <button id="generate-btn">Générer une palette</button>
+        </div>
+        
+        <div id="color-palette" class="palette"></div>
+        
+        <div class="color-info">
+            <div id="color-display"></div>
+            <div id="color-values">
+                <p>HEX: <span id="hex-value"></span></p>
+                <p>RGB: <span id="rgb-value"></span></p>
+                <p>HSL: <span id="hsl-value"></span></p>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <button id="save-btn">Sauvegarder cette palette</button>
+            <button id="clear-btn">Effacer tout</button>
+        </div>
+        
+        <div class="saved-palettes">
+            <h2>Palettes sauvegardées</h2>
+            <div id="saved-container"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
